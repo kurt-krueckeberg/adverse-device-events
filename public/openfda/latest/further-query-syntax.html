@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Using OpenFDA for Searching Adverse Devie Events</title>
+    <link rel="canonical" href="https://krueckeberg.gitlab.io/antora-howto/openfda/latest/further-query-syntax.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://krueckeberg.gitlab.io/antora-howto">Using OpenFDA for Searching Adverse Devie Events</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="openfda" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OpenFDA Adverse Device Events</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">introduction.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">authorization.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">queries-overview.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">query-parameters.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">further-query-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">advanced-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">examples.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">api-syntax-rules.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">dev-adv-ev-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">sig-dev-adv-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">code-query-ideas.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">json-file-downloads.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">todo.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Using OpenFDA for Searching Adverse Devie Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="further-query-syntax"><a class="anchor" href="#further-query-syntax"></a>Further Query Syntax</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="boolean-searches"><a class="anchor" href="#boolean-searches"></a>Boolean Searches</h3>
+<div class="sect3">
+<h4 id="boolean-or-searches"><a class="anchor" href="#boolean-or-searches"></a>Boolean OR Searches</h4>
+<div class="paragraph">
+<p>To search for records that match either of two search terms or two
+search two or more fields for combined results, use the <code>+</code> for logical
+OR:</p>
+</div>
+<div class="paragraph">
+<p>Below we search for two terms in the <code>device.device_report_product_code</code>
+field:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/device/event.json?search=device.device_report_product_code="HQF"+device.device_report_product_code="LZS"">https://api.fda.gov/device/event.json?search=device.device_report_product_code="HQF"+device.device_report_product_code="LZS"</a></p>
+</div>
+<div class="paragraph">
+<p>You can also search two different fields and return the union of the
+results of each, i.e., a logical OR. Below we query the <strong>drug/event</strong>
+endpoint for a record where either fatigue was a reported patient
+reaction or the country in which the event happened was Canada.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/event.json?search=patient.reaction.reactionmeddrapt:"fatigue"+occurcountry:"ca"&amp;limit=1">https://api.fda.gov/drug/event.json?search=patient.reaction.reactionmeddrapt:"fatigue"+occurcountry:"ca"&amp;limit=1</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="boolean-and-searches"><a class="anchor" href="#boolean-and-searches"></a>Boolean AND Searches</h3>
+<div class="paragraph">
+<p>search=field:term+AND+field:term: Search for records that match both
+terms.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-grouping"><a class="anchor" href="#using-grouping"></a>Using Grouping</h3>
+<div class="paragraph">
+<p>To group several terms together, use parentheses <code>( )</code>. For example,
+this boolean OR search
+<code>search=patient.drug.medicinalproduct:cetirizine+patient.drug.medicinalproduct:loratadine+patient.drug.medicinalproduct:diphenhydramine</code>
+is equivalent to
+<code>search=patient.drug.medicinalproduct:(cetirizine+OR+loratadine+OR+diphenhydramine)</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="searches-with--vs-"><a class="anchor" href="#searches-with--vs-"></a>Searches with <code>:</code> vs <code>=</code></h3>
+<div class="paragraph">
+<p><strong>TODO:</strong> You can do <code>search=field="term"</code>, too&#8212;&#8203;right?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

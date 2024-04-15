@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Using OpenFDA for Searching Adverse Devie Events</title>
+    <link rel="canonical" href="https://krueckeberg.gitlab.io/antora-howto/openfda/latest/code-query-ideas.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://krueckeberg.gitlab.io/antora-howto">Using OpenFDA for Searching Adverse Devie Events</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="openfda" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OpenFDA Adverse Device Events</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">introduction.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">authorization.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">queries-overview.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">query-parameters.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">further-query-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">advanced-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">examples.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">api-syntax-rules.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">dev-adv-ev-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">sig-dev-adv-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">code-query-ideas.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">json-file-downloads.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">todo.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Using OpenFDA for Searching Adverse Devie Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="code-ideas-for-the-deviceevent-endpoint"><a class="anchor" href="#code-ideas-for-the-deviceevent-endpoint"></a>Code Ideas for the device/event Endpoint</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Javascript + ReactJS seems a more straight forward solution for
+implementing the openFDA API calls to query adverse device event data
+for those device I am interested in, as it client-side, browser-based
+solution.</p>
+</div>
+<div class="paragraph">
+<p>But I&#8217;m not sure is graphing libraries like D3.js are server side?</p>
+</div>
+<div class="sect2">
+<h3 id="prospective-queries-for-lasik-related-deviced"><a class="anchor" href="#prospective-queries-for-lasik-related-deviced"></a>Prospective Queries for LASIK-related Deviced</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Search for <code>device.device_report_product_Code="LZS"</code> (for device of
+Excimer Laser) where <code>mdr_text</code> contains <code>dry</code>:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code><a href="https://api.fda.gov/device/event.json?search=(device.device_report_product_Code="LZS")AND(mdr_text.text:dry" class="bare">https://api.fda.gov/device/event.json?search=(device.device_report_product_Code="LZS")AND(mdr_text.text:dry</a>)</code></p>
+</div>
+<div class="paragraph">
+<p>Execute call</p>
+</div>
+<div class="paragraph">
+<p>:::{note} This also works:
+<code><a href="https://api.fda.gov/device/event.json?search=device.device_report_product_Code="LZS"+AND+mdr_text.text:dry" class="bare">https://api.fda.gov/device/event.json?search=device.device_report_product_Code="LZS"+AND+mdr_text.text:dry</a></code>
+:::</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Search for device adverse events for Excimer Lasik code <code>LZS</code> or
+AC-powered keratome code <code>HNO</code>:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code><a href="https://api.fda.gov/device/event.json?search=device.device_report_product_Code="HNO"+device.device_report_product_Code="LZS"" class="bare">https://api.fda.gov/device/event.json?search=device.device_report_product_Code="HNO"+device.device_report_product_Code="LZS"</a></code></p>
+</div>
+<div class="paragraph">
+<p>Execute call</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Here we search for all the product codes (using boolean OR operator
+<code>+</code>): <code>HQF</code>, <code>LZS</code>, <code>OTL</code>, <code>HMY</code>, <code>HNO</code>, <code>MYD</code>, <code>NKY</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code><a href="https://api.fda.gov/device/event.json?search=device.device_report_product_Code="HQF"+device.device_report_product_Code="LZS"+device.device_report_product_Code="OTL"+device.device_report_product_Code="HMY"+device.device_report_product_Code="HNO"+device.device_report_product_Code="MYD"+device.device_report_product_Code="NKY"" class="bare">https://api.fda.gov/device/event.json?search=device.device_report_product_Code="HQF"+device.device_report_product_Code="LZS"+device.device_report_product_Code="OTL"+device.device_report_product_Code="HMY"+device.device_report_product_Code="HNO"+device.device_report_product_Code="MYD"+device.device_report_product_Code="NKY"</a></code></p>
+</div>
+<div class="paragraph">
+<p>Execute call</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Count <code>mdr_report_key</code> 's for "LZS" (Excimer Laser System) reports:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code><a href="https://api.fda.gov/device/event.json?search=date_received:">20130101+TO+20141231</a>&amp;limit=1</code></p>
+</div>
+<div class="paragraph">
+<p>&lt;a
+href=hittps://api.fda.gov/device/event.json?search=device.device_report_product_Code="LZS"&amp;count:device.mdr_report_key'&gt;Execute
+call</p>
+</div>
+<div class="paragraph">
+<p>:::{note} <code>mdr_report_key</code> is unique, anyway, so the use of <code>count</code> is
+only a usage example (but of no practical use).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="general-query-options"><a class="anchor" href="#general-query-options"></a>General Query Options</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Searching for a specified date range:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code><a href="https://api.fda.gov/device/event.json?search=date_received:">20130101+TO+20141231</a>&amp;limit=1</code></p>
+</div>
+<div class="paragraph">
+<p>Execute call</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Search for adverse events within a date range. A date range is
+specified using brackets <code>[ ]</code>; for example, to search for all records
+with date_received between Jan 01, 2013 and Dec 31, 2014, and to limit
+the results to one retuned value:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code><a href="https://api.fda.gov/device/event.json?search=date_received:">20130101+TO+20141231</a>&amp;limit=1</code></p>
+</div>
+<div class="paragraph">
+<p>See searchable fields for more about <code>date_received</code>. Brackets <code>[ ]</code> are
+used to specify a range for date, number, or string fields.</p>
+</div>
+<div class="paragraph">
+<p><code><a href="https://api.fda.gov/device/event.json?search=date_received:">20130101+TO+20141231</a>&amp;limit=1</code></p>
+</div>
+<div class="paragraph">
+<p>Execute call</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

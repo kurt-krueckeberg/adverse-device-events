@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Using OpenFDA for Searching Adverse Devie Events</title>
+    <link rel="canonical" href="https://krueckeberg.gitlab.io/antora-howto/openfda/latest/queries-overview.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://krueckeberg.gitlab.io/antora-howto">Using OpenFDA for Searching Adverse Devie Events</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="openfda" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OpenFDA Adverse Device Events</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">introduction.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">authorization.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">queries-overview.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">query-parameters.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">further-query-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">advanced-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">examples.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">api-syntax-rules.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">dev-adv-ev-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">sig-dev-adv-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">code-query-ideas.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">json-file-downloads.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">todo.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Using OpenFDA for Searching Adverse Devie Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="queries-overview"><a class="anchor" href="#queries-overview"></a>Queries Overview</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="json-results-object"><a class="anchor" href="#json-results-object"></a>JSON Results Object</h3>
+<div class="paragraph">
+<p>Query results are returned as a JSON object with two properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>meta</code> certain data about the request.</p>
+</li>
+<li>
+<p>the <code>results</code> array</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>meta</code> contains a <code>total</code> results count, and <code>offset</code> and <code>limit</code> values
+(useful for pagination):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Meta Field</th>
+<th class="tableblock halign-left valign-top">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>meta.disclaimer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Important details notes about openFDA data and
+limitations of the dataset.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>meta.license</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link to a web page with license terms that govern data
+within openFDA.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>meta.last_updated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The last date when this openFDA endpoint was
+updated. Note that this does not correspond to the most recent record
+for the endpoint or dataset. Rather, it is the last time the openFDA API
+was itself updated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>meta.results.skip</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The skip is the <strong>offset</strong> of the results.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>meta.results.limit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Number of records returned</strong>, as defined by the
+<em>limit</em> query parameter. If the <code>limit</code> parameter was omitted, the API
+returns one result.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>meta.results.total</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Total number of records</strong> matching the search
+criteria.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>2.<code>results</code> — the arrray of matches (for non-counting querires).</p>
+</div>
+<div class="paragraph">
+<p>:::{important} Unless otherwise specified, the API will return only
+<strong>one</strong> matching record for a search. You can specify the number of
+records to be returned by using the <code>limit</code> parameter. The maximum limit
+allowed is 1000 for any single API call. If no limit is set, the API
+will return one matching record. :::</p>
+</div>
+<div class="paragraph">
+<p>The query <code><a href="https://api.fda.gov/drug/event.json?limit=1" class="bare">https://api.fda.gov/drug/event.json?limit=1</a></code> searches the
+<code>drug/event</code> endpoint for a single record (<code>limit=1</code>).</p>
+</div>
+<div class="paragraph">
+<p>The <code>results</code> properties in the single record returned contains all
+kinds of information about the adverse event report, including the drugs
+that the patient was taking, the reactions that the patient experienced,
+and a good deal of other context:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2023-04-27",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 16364554
+    }
+  },
+  "results": [
+    {
+      "safetyreportid": "5801206-7",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20090109",
+      "serious": "1",
+      "seriousnessdeath": "1",
+      "receivedateformat": "102",
+      "receivedate": "20080707",
+      "receiptdateformat": "102",
+      "receiptdate": "20080625",
+      "fulfillexpeditecriteria": "1",
+      "companynumb": "JACAN16471",
+      "primarysource": {
+        "reportercountry": "CANADA",
+        "qualification": "3"
+      },
+      "sender": {
+        "senderorganization": "FDA-Public Use"
+      },
+      "receiver": null,
+      "patient": {
+        "patientonsetage": "26",
+        "patientonsetageunit": "801",
+        "patientsex": "1",
+        "patientdeath": {
+          "patientdeathdateformat": null,
+          "patientdeathdate": null
+        },
+        "reaction": [
+          {
+            "reactionmeddrapt": "DRUG ADMINISTRATION ERROR"
+          },
+          {
+            "reactionmeddrapt": "OVERDOSE"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "DURAGESIC-100",
+            "drugauthorizationnumb": "019813",
+            "drugadministrationroute": "041",
+            "drugindication": "DRUG ABUSE"
+          }
+        ]
+      }
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

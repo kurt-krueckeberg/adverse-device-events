@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Using OpenFDA for Searching Adverse Devie Events</title>
+    <link rel="canonical" href="https://krueckeberg.gitlab.io/antora-howto/openfda/latest/advanced-syntax.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://krueckeberg.gitlab.io/antora-howto">Using OpenFDA for Searching Adverse Devie Events</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="openfda" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OpenFDA Adverse Device Events</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">introduction.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">authorization.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">queries-overview.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">query-parameters.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">further-query-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">advanced-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">examples.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">api-syntax-rules.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">dev-adv-ev-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">sig-dev-adv-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">code-query-ideas.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">json-file-downloads.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">todo.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Using OpenFDA for Searching Adverse Devie Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="advanced-syntax"><a class="anchor" href="#advanced-syntax"></a>Advanced Syntax</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can group search criterai with <code>()</code> and do boolean <code>OR</code> and <code>AND</code>
+searches.</p>
+</div>
+<div class="sect2">
+<h3 id="examples-of-grouping-and-boolean-searches"><a class="anchor" href="#examples-of-grouping-and-boolean-searches"></a>Examples of Grouping and Boolean Searches</h3>
+<div class="paragraph">
+<p>Grouping several terms inside <code>( )</code> can simplify searches. For example,
+a long search expression like</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/device/event.json?search=device.device_report_product_Code="HQF"+device.device_report_product_Code="LZS"">https://api.fda.gov/device/event.json?search=device.device_report_product_Code="HQF"+device.device_report_product_Code="LZS"</a></p>
+</div>
+<div class="paragraph">
+<p>can be rewritten with <code>()</code> and <code>OR</code>:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/device/event.json?search=device.device_report_product_Code=("HQF"OR"LZS")">https://api.fda.gov/device/event.json?search=device.device_report_product_Code=("HQF"OR"LZS")</a></p>
+</div>
+<div class="paragraph">
+<p>:::{important} Apparently a boolean-or search of phrases <strong>requires</strong>
+<code>()</code> and <code>OR</code> like this<br>
+<code><a href="https://api.fda.gov/drug/enforcement.json?search=classification:("Class+I"OR"Class+II"" class="bare">https://api.fda.gov/drug/enforcement.json?search=classification:("Class+I"OR"Class+II"</a>)</code><br>
+with the embedded spaced denoted by <code>+</code>.<br>
+See
+<a href="https://opendata.stackexchange.com/questions/3443/openfda-api-can-i-perform-search-by-same-field-with-various-values/3444#3444" class="bare">https://opendata.stackexchange.com/questions/3443/openfda-api-can-i-perform-search-by-same-field-with-various-values/3444#3444</a>
+:::</p>
+</div>
+<div class="paragraph">
+<p>You can also perform AND searches (to find all matching search terms).
+As an example, say, you want to find where
+<code>patient.drug.medicinalproduct</code> contains <code>cetirizine</code> and where
+<code>serious</code> is <code>2</code>, you can do</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:cetirizine+AND+serious:2" class="bare">https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:cetirizine+AND+serious:2</a></p>
+</div>
+<div class="paragraph">
+<p>You can add <code>OR</code> search criteria to search for one of several
+<code>medicinalproduct</code>:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:(cetirizine+OR+loratadine+OR+diphenhydramine)+AND+serious:2" class="bare">https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:(cetirizine+OR+loratadine+OR+diphenhydramine)+AND+serious:2</a></p>
+</div>
+<div class="paragraph">
+<p>The example above could also have been written (with a further set of
+<code>()</code>) as</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/event.json?search=(patient.drug.medicinalproduct:(cetirizine+OR+loratadine+OR+diphenhydramine))+AND+serious:2" class="bare">https://api.fda.gov/drug/event.json?search=(patient.drug.medicinalproduct:(cetirizine+OR+loratadine+OR+diphenhydramine))+AND+serious:2</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="further-examples"><a class="anchor" href="#further-examples"></a>Further Examples</h3>
+<div class="paragraph">
+<p>Search for the adverse events where
+<code>device.device_report_product_code=LZS</code>, Excimer Laser Systems, and
+where the reported text contains <code>dry</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/device/event.json?search=(device.device_report_product_code=LZS)AND(mdr_text.text:dry" class="bare">https://api.fda.gov/device/event.json?search=(device.device_report_product_code=LZS)AND(mdr_text.text:dry</a>)</p>
+</div>
+<div class="paragraph">
+<p>you get 1596 total results. If you use the <code>.exact</code> suffix and change
+<code>:</code> to <code>=</code>:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/device/event.json?search=(device.device_report_product_code=LZS)AND(mdr_text.text.exact=dry" class="bare">https://api.fda.gov/device/event.json?search=(device.device_report_product_code=LZS)AND(mdr_text.text.exact=dry</a>)</p>
+</div>
+<div class="paragraph">
+<p>you get 1822 total results. <strong>todo:</strong> where do the results differ and why?</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dates-and-ranges"><a class="anchor" href="#dates-and-ranges"></a>Dates and ranges</h3>
+<div class="paragraph">
+<p>The openFDA API supports searching by range in date, numeric, or string
+fields.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Specify an inclusive range by using square brackets <code>[min+TO+max]</code>.
+These include the values in the range. For example, <code>[1+TO+5]</code> will
+match 1 through 5.</p>
+</li>
+<li>
+<p>Dates are simple to search by via range. For instance,
+<code>[2004-01-01+TO+2005-01-01]</code> will search for records between <strong>Jan 1,
+2004</strong> and <strong>Jan 1, 2005</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Add example</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="missing-or-not-missing-values"><a class="anchor" href="#missing-or-not-missing-values"></a>Missing (or not missing) values</h3>
+<div class="paragraph">
+<p>You can search for empty fields or for fields that are not empty:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><em>missing</em></code>: search modifier that matches when a field has no value
+(is empty).</p>
+</li>
+<li>
+<p><code><em>exists</em></code>: search modifier that matches when a field has a value (is
+not empty).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Add example</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="timeseries"><a class="anchor" href="#timeseries"></a>Timeseries</h3>
+<div class="paragraph">
+<p><strong>TODO:</strong> Add example</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="paging"><a class="anchor" href="#paging"></a>Paging</h3>
+<div class="paragraph">
+<p><strong>TODO:</strong> Add example</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

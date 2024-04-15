@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Using OpenFDA for Searching Adverse Devie Events</title>
+    <link rel="canonical" href="https://krueckeberg.gitlab.io/antora-howto/openfda/latest/sig-dev-adv-fields.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://krueckeberg.gitlab.io/antora-howto">Using OpenFDA for Searching Adverse Devie Events</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="openfda" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OpenFDA Adverse Device Events</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">introduction.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">authorization.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">queries-overview.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">query-parameters.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">further-query-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">advanced-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">examples.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">api-syntax-rules.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">dev-adv-ev-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">sig-dev-adv-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">code-query-ideas.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">json-file-downloads.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">todo.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Using OpenFDA for Searching Adverse Devie Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="most-important-device-adverse-event-fields"><a class="anchor" href="#most-important-device-adverse-event-fields"></a>Most Important Device Adverse Event Fields</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As explained on the previous page, fields denoted <code>.exact</code> can be
+searched for an exact phrase.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-{csv-table} hljs" data-lang="{csv-table}">:header: &gt;
+:    "Field", ".exact?", "Description","Significant Value"
+:widths: 19 3 60 18
+:delim: "|"
+
+`adverse_event_flag`|Y|"Whether the report is about an incident where the use of the device is suspected to have resulted in an adverse outcome in a patient:
+- Y means yes it did
+- N means no it did not."|`Y`
+`device.device_report_product_code`|Y|Three-letter FDA Product Classification|See list of codes in table below.
+`source_type`|Y|"The manufacturer-reported source of the adverse event report. This is an `.exact` field. It has been indexed both as its exact string content and also tokenized. Value is one of:
+
+- Other = Other
+- Foreign = Foreign
+- Study = Study
+- Literature = Literature
+- Consumer = Consumer
+- Health Professional = Health Professional
+- User facility = User facility
+- Company representation = Company representation
+- Distributor = Distributor
+- Unknown = Unknown"|`source_type:consumer`
+`device.openfda.device_name`|Y|"This is the proprietary name, or trade name, of the cleared device.
+
+This is an `.exact` field. It has been indexed both as its exact string content, and also tokenized."|
+`device.generic_name`|Y|The generic or common name of the suspect medical device or a generally descriptive name (e.g. urological catheter, heart pacemaker, patient restraint, etc.).This is an `.exact` field.|`device.generic_name:LASIK` or `device.generaic_name:"refractive surgery`
+`mdr_text.text`|Y|Narrative text or problem description. This is an `.exact field`.|
+`mdr_text.txt`|Y|Narrative text or problem description|
+`date_report`|N|Date the initial reporter (whoever initially provided information to the user facility, manufacturer, or importer) provided the information about the event.|
+`report_source_code`|Y|Source of the adverse event report--Manufact., Voluntary, User Fac., Distributor|`Voluntary report`
+`type_of_report`|Y|"A string that describes the type of report. This is an .exact field. Value is one of the following:
+
+- Initial submission = Initial report of an event.
+- Followup = Additional or corrected information.
+- Extra copy received = Documentation forthcoming.
+- Other information submitted = Documentation forthcoming."|
+`event_location`|Y|"Where the event occurred.
+
+This is an `.exact` field. It has been indexed both as its exact string content, and also tokenized.
+
+Value is one of the following:
+
+- Other = Other
+- Hospital = Hospital
+- Home = Home
+- Nursing home = Nursing home
+- Outpatient treatment facility = Outpatient treatment facility
+- Outpatient diagnostic facility = Outpatient diagnostic facility
+- Ambulatory surgical facility = Ambulatory surgical facility
+- Catheterization suite = Catheterization suite
+- Critical care unit = Critical care unit
+- Dialysis unit = Dialysis unit
+- Emergency room = Emergency room
+- Examination room = Examination room
+- Laboratory/pathology department = Laboratory/pathology department
+- Maternity ward - nursery = Maternity ward - nursery
+- Operating room = Operating room
+- Outpatient clinic/surgery = Outpatient clinic/surgery
+- Patients room or ward = Patients room or ward
+- Radiology department = Radiology department
+- Ambulatory health care facility = Ambulatory health care facility
+- Ambulatory surgical center = Ambulatory surgical center
+- Blood bank = Blood bank
+- Bloodmobile = Bloodmobile
+- Catheterization lab - free standing = Catheterization lab - free standing
+- Chemotherapy center = Chemotherapy center
+- Clinic - walk in, other = Clinic - walk in, other
+- Dialysis center = Dialysis center
+- Drug clinic = Drug clinic
+- Imaging center - mobile = Imaging center - mobile
+- Imaging center - stationary = Imaging center - stationary
+- Laboratory = Laboratory
+- Mobile health unit = Mobile health unit
+- Mri centers = Mri centers
+- Psychiatric center - walk in, other = Psychiatric center - walk in, other
+- Tuberculosis clinic = Tuberculosis clinic
+- Urgent care center = Urgent care center
+- Long-term care facility = Long-term care facility
+- Hospice = Hospice
+- Psychiatric facility = Psychiatric facility
+- Rehabilitation center = Rehabilitation center
+- Retirement home = Retirement home
+- Patients home = Patients home
+- In transit to user/medical facility = In transit to user/medical facility
+- Public venue = Public venue
+- Outdoors = Outdoors
+- Park = Park
+- Playground = Playground
+- Public building = Public building
+- School = School
+- Street = Street
+- Unknown = Unknown
+- Not applicable = Not applicable
+- No information = No information
+- Invalid data = Invalid data"|
+`mdr_report_key`|Y|a string that acts like a primary and foreign key for joining four file together|nothing
+`patient.patient_problems`|array of strings|"Describes actual adverse effects on the patient that may be related to the device problem observed during the reported event.
+This is an `.exact` field. It has been indexed both as its exact string content, and also tokenized."
+`mdr_text.text_type_code`|string|"String that describes the type of narrative contained within the text field.
+
+This is an `.exact` field. It has been indexed both as its exact string content, and also tokenized.
+
+Value is one of the following:
+
+- Description of Event or Problem = The problem (quality, performance, or safety concern) in sufficient detail so that the circumstances surrounding the defect or malfunction of the medical product can be understood. For patient adverse events, may include a description of the event in detail using the reporter’s own words, including a description of what happened and a summary of all relevant clinical information (medical status prior to the event; signs and/or symptoms; differential diagnosis for the event in question; clinical course; treatment; outcome, etc.). If available and if relevant, may include synopses of any office visit notes or the hospital discharge summary. This section may also contain information about surgical procedures and laboratory tests.
+- Manufacturer Evaluation Summary = If available, the results of any evaluation of a malfunctioning device and, if known, any relevant maintenance/service information should be included in this section.
+- Additional Manufacturer Narrative = Documentation forthcoming."</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>:::{table} Significant 3-letter codes found in
+<code>device.device_report_product_code</code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Device Product Codes</th>
+<th class="tableblock halign-left valign-top">Device name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HQF</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser, Ophthalmic <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LZS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Excimer Laser System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>OTL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Femtosecond Laser System For Refractive Correction</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HMY</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keratome, Battery-Powered</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HNO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keratome, AC-Powered</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MYD</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keratome, Water Jet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NKY</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Blade, Keratome, Reprocessed</p></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">:</dt>
+</dl>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. This Laser Opthalmic device might not be a refractive surgery device. TODO: Find out if it is.
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

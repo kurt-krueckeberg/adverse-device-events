@@ -1,0 +1,8 @@
+1. These two files
+
+p/sig-dev-adv-fields.adoc
+p/dev-adv-ev-fields.adoc
+
+have non-asciidoc tabkles of type `{csv-table}`. Convert these to Asciidoc tables.
+
+2. Add the new features of the RESTful API like wildcard searches of the form `field:some_txt*`

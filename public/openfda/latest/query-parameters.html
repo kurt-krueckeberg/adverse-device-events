@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Using OpenFDA for Searching Adverse Devie Events</title>
+    <link rel="canonical" href="https://krueckeberg.gitlab.io/antora-howto/openfda/latest/query-parameters.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://krueckeberg.gitlab.io/antora-howto">Using OpenFDA for Searching Adverse Devie Events</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="openfda" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OpenFDA Adverse Device Events</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">introduction.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">authorization.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">queries-overview.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">query-parameters.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">further-query-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">advanced-syntax.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">examples.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">api-syntax-rules.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">dev-adv-ev-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">sig-dev-adv-fields.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">code-query-ideas.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">json-file-downloads.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">todo.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Using OpenFDA for Searching Adverse Devie Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Using OpenFDA for Searching Adverse Devie Events</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="query-parameters"><a class="anchor" href="#query-parameters"></a>Query Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>openFDA</strong> API supports these five query parameters:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter type</th>
+<th class="tableblock halign-left valign-top">How it is used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>search</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">What to search for and in which fields. If you don’t specify
+a field to search, the API will search in every field.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort the results of the search by the specified field in
+ascending or descending order by using the <code>:asc</code> or <code>:desc</code> modifier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Count the <strong>number of unique values</strong> of a certain field, for
+all the records that matched the search parameter. By default, the 1000
+most frequent values are returned.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>limit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return up to this number of records that match the search
+parameter. Currently, the largest allowed limit is 1000.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>skip</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skip this number of records that match the search parameter,
+then return the matching records that follow. Use <code>skip</code> in combination
+with <code>limit</code> to paginate results. Currently, the largest allowed value
+for the skip parameter is 25000.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Query paramters must be separated by <code>&amp;</code>; for example, <code>limit</code> used
+along with <code>sort</code>:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/event.json?sort=receivedate:desc&amp;limit=10" class="bare">https://api.fda.gov/drug/event.json?sort=receivedate:desc&amp;limit=10</a></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Use <code>&amp;</code> to separate query parameters.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="searches"><a class="anchor" href="#searches"></a>Searches</h3>
+<div class="paragraph">
+<p><code>search=field:term</code> searches for any occurance of "term" in the <code>field</code>.
+It does do <code>field=term</code> exact matching.</p>
+</div>
+<div class="paragraph">
+<p>The query <code>search=brand_name:Advil</code> searches for any occurance of
+<strong>Advil</strong> in <code>brand_name</code>:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?search=brand_name:Advil&amp;limit=1000" class="bare">https://api.fda.gov/drug/ndc.json?search=brand_name:Advil&amp;limit=1000</a></p>
+</div>
+<div class="paragraph">
+<p>It returns `brand_name&#8217;s like</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"JUNIOR STRENGTH <strong>ADVIL</strong>"</p>
+</li>
+<li>
+<p>"<strong>ADVIL</strong> PM- diphenhydramin…buprofen tablet, coated"</p>
+</li>
+<li>
+<p>"<strong>Advil</strong> Sinus Congestion and Pain"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and so on. If the search term is a phrase like "Congestion and Pain",
+the entire phrase must occur in <code>brand_name</code>. The query</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?search=brand_name:"Congestion+and+Pain"&amp;limit=6">https://api.fda.gov/drug/ndc.json?search=brand_name:"Congestion+and+Pain"&amp;limit=6</a></p>
+</div>
+<div class="paragraph">
+<p>will find differing brand names that contain the phrase "Congestion and
+Pain":</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Maximum Strength Mucinex Sinus-Max Severe <strong>Congestion and Pain</strong> and
+Mucinex Nightshift Sinus"</p>
+</li>
+<li>
+<p>"Maximum Strength Mucinex Sinus-Max Severe <strong>Congestion and Pain</strong> and
+Mucinex Nightshift Sinus"</p>
+</li>
+<li>
+<p>"Mucinex-Sinus Max Severe <strong>Congestion and Pain</strong> Clear and Cool and
+Mucinex Nightshift Sinus Clear and Cool"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and so on.</p>
+</div>
+<div class="paragraph">
+<p>In this example, <code>pharm_class</code> is searched for "Decrease":</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?search=pharm_class:Decreased&amp;limit=10" class="bare">https://api.fda.gov/drug/ndc.json?search=pharm_class:Decreased&amp;limit=10</a></p>
+</div>
+<div class="paragraph">
+<p>Results include hits like:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"<strong>Decreased</strong> Respiratory Secretion Viscosity [PE]"</p>
+</li>
+<li>
+<p>"<strong>Decreased</strong> Prostaglandin Production [PE]", and "Decreased Platelet
+Aggregation [PE]".</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="what-the-exact-suffix-means"><a class="anchor" href="#what-the-exact-suffix-means"></a>What the <code>.exact</code> suffix means</h4>
+<div class="sidebarblock">
+<div class="content">
+The information that follows was taken from an <strong>openfda.stackexchange.com</strong> link:
+<a href="https://opendata.stackexchange.com/questions/20112/the-difference-between-exact-with-suffix-and-without-suffix">answer</a>.
+</div>
+</div>
+<div class="paragraph">
+<p>Some fields also have a second, <code>.exact</code> version which can also be
+searched. As we have seen, a field (without the <code>.exact</code> suffix) can be
+search for partial searches. It has been tokenized to allow flexible
+partial searches, so a query like
+<a href="https://api.fda.gov/drug/ndc.json?search=brand_name:Advil&amp;limit=1000" class="bare">https://api.fda.gov/drug/ndc.json?search=brand_name:Advil&amp;limit=1000</a>
+will return all drugs that contain "Advil" within their brand name, such
+as "CHILDRENS ADVIL", "ADVIL MIGRAINE", and so on.</p>
+</div>
+<div class="paragraph">
+<p><code>brand_name</code> also has a <code>.exact</code>-suffix version. It too can be search
+for "Advil":</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?search=brand_name.exact:Advil&amp;limit=1000" class="bare">https://api.fda.gov/drug/ndc.json?search=brand_name.exact:Advil&amp;limit=1000</a></p>
+</div>
+<div class="paragraph">
+<p>You will now see fewer results. Each result will have (exactly&#8212;&#8203;right?)
+"Advil" as its <code>brand_name</code> (nothing more and nothing less&#8212;&#8203;right?).
+Exact match must match exactly. <strong>todo:</strong> double check.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__exists__-searches"><a class="anchor" href="#__exists__-searches"></a><code><em>exists</em></code> searches</h4>
+<div class="paragraph">
+<p>todo: Perform the searches mention above to better understand what is
+mean.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="search-questions"><a class="anchor" href="#search-questions"></a>Search Questions</h4>
+<div class="paragraph">
+<p>Question: What does <code>search=field=true</code> do or mean? For example,</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?search=pharm_class=true" class="bare">https://api.fda.gov/drug/ndc.json?search=pharm_class=true</a></p>
+</div>
+<div class="paragraph">
+<p>Question: What does <code><em>exist</em></code> do. For example,</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?search=" class="bare">https://api.fda.gov/drug/ndc.json?search=</a><em>exists</em>:openfda.pharm_class_cs&amp;count=pharm_class.exact</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="counting-with-count"><a class="anchor" href="#counting-with-count"></a>Counting with <code>count</code></h3>
+<div class="paragraph">
+<p><code>count:</code> Count the number of unique values of a certain field, for all
+the records that matched the search parameter. By default, the API
+returns the 1000 most frequent values.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/event.json?count=patient.reaction.reactionmeddrapt.exact" class="bare">https://api.fda.gov/drug/event.json?count=patient.reaction.reactionmeddrapt.exact</a></p>
+</div>
+<div class="paragraph">
+<p>The number of unique phrases found in
+<code>patient.reaction.reactionmeddrapt.exact</code> is counted. todo: Is the prior
+statement correct? The <code>.exact</code> suffix tells the API to count whole
+phrases (e.g. "DRUG INEFFECTIVE") instead of individual words (e.g.
+"DRUG" and "INEFFECTIVE" separately).</p>
+</div>
+<div class="paragraph">
+<p><code>count</code> is also often used along with <code>search</code>. Below the <strong>drug/ncd</strong>
+endpoint is searched for brand names that contain "Advil". The unique
+number of <code>pharm_class.exact</code> is returned.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?search=brand_name:Advil&amp;count=pharm_class.exact" class="bare">https://api.fda.gov/drug/ndc.json?search=brand_name:Advil&amp;count=pharm_class.exact</a></p>
+</div>
+<div class="paragraph">
+<p>Question: Can only <code>.exact</code> fields be searched? For example,
+<a href="https://api.fda.gov/drug/ndc.json?count=pharm_class.exact" class="bare">https://api.fda.gov/drug/ndc.json?count=pharm_class.exact</a> return
+results, but without the <code>.exact</code> suffix no results are returned</p>
+</div>
+<div class="paragraph">
+<p><a href="https://api.fda.gov/drug/ndc.json?count=pharm_class" class="bare">https://api.fda.gov/drug/ndc.json?count=pharm_class</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
