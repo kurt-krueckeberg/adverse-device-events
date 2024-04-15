@@ -1,0 +1,24 @@
+== JSON Dataset Downloads
+
+This information is found on the openFDA link:https://open.fda.gov/apis/downloads/[downloads page].
+
+You can automate the download of the JSON datasets with this link:https://api.fda.gov/download.json[JSON file] that lists all the
+downloadable JSON datasets are hosted at https://download.open.fda.gov/.
+
+[IMPORTANT]
+.Requirement to Redownload Data
+====
+link:https://open.fda.gov/apis/downloads/[downloads page] explains you must re-download all availabe data files every time new data
+is added:
+
+____
+To keep your downloaded data up to date, you need to *re-download the
+data every time it is updated*. Every time an endpoint is updated (which
+happens on a regular basis), it is possible that every record has
+changed, due to corrections or enhancements. That means that you cannot
+simply download “new” files to keep your downloaded version up to date.
+You need to *download all available data files* for the endpoint of
+interest.
+____
+
+====
