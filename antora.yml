@@ -1,0 +1,11 @@
+name: OpenFDA Howto
+title: Using OpenFDA for Searching Adverse Devie Events
+version: 'latest'
+# display_version: default
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+    xrefstyle: short@
+    listing-caption: Example@
+nav:
+  - modules/ROOT/nav-top.adoc
