@@ -1,8 +1,8 @@
 1. These two files
 
-p/sig-dev-adv-fields.adoc
-p/dev-adv-ev-fields.adoc
+p/significant-device-adverse-event-fields.adoc needs to be reworked: the table's delimieter and paragraph fomatting seems incorrect for
+asciidoc.
 
-have non-asciidoc tabkles of type `{csv-table}`. Convert these to Asciidoc tables.
+p/dev-adv-ev-fields.adoc has non-asciidoc tables of type `{csv-table}`. Convert these to Asciidoc tables.
 
-2. Add the new features of the RESTful API like wildcard searches of the form `field:some_txt*`
+2. Add the new features of the RESTful API, like wildcard searches using asterisk of the form `field:some_txt*`
